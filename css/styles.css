@@ -1,0 +1,22 @@
+#heading1 {
+  text-align: center;
+}
+
+.col-md-6 {
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  margin: 0;
+  position: fixed;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}

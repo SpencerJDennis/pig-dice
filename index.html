@@ -14,16 +14,25 @@
   </form>
   <div class="row">
     <div class="col-md-6">
-      <p>Player 1 Score:</p>
+      <p>Player 1 Score: <span id="score1">0</span></p>
     </div>
     <div class="col-md-6">
-      <p>Player 2 Score:</p>
+      <p>Player 2 Score: <span id="score2">0</span></p>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12">
       <div class="turn-results">
-        <p>this should be empty and when they take their turns itll fill up with their roles and also have their buttons for ending or to keep going</p>
+        <div class="hidden" id="turnid">
+          <h2>It's currently Player <span id="playerTurn">1</span>'s Turn</h2>
+        </div>
+        <div class="hidden" id="showRoll">
+          <h4>You rolled a: <span id="roll"></span></h4>
+        </div>
+        <div class="hidden" id="rollsSoFar">
+          <p>You have rolled so far: <span id="allRolls"></span></p>
+          <p>Sum of rolls: <span id="sumOfRolls"></span></p>
+        </div>
         <div class="hidden" id="sT1">
           <button type="button" class="startTurn" id="start">Start Turn!</button>
         </div>
@@ -37,17 +46,14 @@
       </div>
     </div>
   </div>
-  <div class="hidden" id="player1Info">0, 0, 1, 0</div>
-  <div class="hidden" id="player2Info">0, 0, 2, 0</div>
-
   <div class="row">
     <div class="col-md-12">
       <div class = "hidden" id="gameOver">
         <h2>GAME OVER THE WINNER IS: PLAYER <span id=winner></span></h2>
+        <button type="submit" onClick="refreshPage()">Play Again!</button>
       </div>
     </div>
   </div>
-    
   </div>
 </body>
 </html>
